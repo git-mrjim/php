@@ -1,5 +1,7 @@
 <?php 
 
+    require 'vendor/autoload.php';
+
     session_start();
 
     require 'database.php';
@@ -18,6 +20,8 @@
         '/php/about/' => 'controllers/about.php',
         '/php/contact/' => 'controllers/contact.php',
         '/php/session/' => 'controllers/session.php',
+        '/php/playground' => 'controllers/playground.php',
+        '/php/oop' => 'controllers/oop.php'
     ];
 
     if (array_key_exists($uri, $urls)) {
@@ -26,4 +30,9 @@
         http_response_code(404);
         require 'views/404.php';
     }
+
+
+    
+
+
     
